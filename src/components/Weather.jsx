@@ -4,7 +4,7 @@ import config from '../config'
 
 import { AiOutlineExclamationCircle } from "react-icons/ai";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
-
+import { FaTemperatureLow } from "react-icons/fa";
 
 
 const Weather = () => {
@@ -19,7 +19,6 @@ const Weather = () => {
     function getWeatherInfo(){
         axios.get(config.weatherAPIURL + `?q=${config.weatherAPICity}&appid=${config.weatherAPIKey}&units=metric`)
         .then((response) => {
-
             if(response.status != 200){
                 setError(true)
                 setLoading(false)
@@ -27,13 +26,11 @@ const Weather = () => {
                 setWeatherData(response.data)
                 setLoading(false)
             }
-
-            console.log(response)
         })
     }
 
-
-    if(loading){
+    if(loading)
+    {
         return (
             <span>
                 <AiOutlineLoading3Quarters className="icon-spin" /> Loading weather info
@@ -41,16 +38,23 @@ const Weather = () => {
         )
     }
 
-
-    if(error){
-        return (<span>
-            <AiOutlineExclamationCircle / >No weather info
-        </span>)
+    if(error)
+    {
+        return (
+            <span>
+                <AiOutlineExclamationCircle / > No weather info
+            </span>
+        )
     }
 
 
-
-    return ( <span>{weatherData.main.temp} C°</span> );
+    return (
+        <span>
+            <img className="weather-icon" src={`icons/${weatherData.weather[0].icon}.png`} alt="" /> 
+            <span style={{marginRight: "5px"}}>{weatherData.name} </span>
+            <span>{weatherData.main.temp} <FaTemperatureLow /></span>
+        </span> 
+    );
 }
  
 export default Weather;

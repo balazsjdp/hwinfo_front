@@ -1,12 +1,27 @@
+.app{
+  display: flex;
+}
+
 .header{
     position: fixed;
     top:0;
     width: 100%;
     height: 25px;
-    background-color:#385360;
+    background-color:white;
+    color: #385360;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    font-weight: 400;
+    box-shadow: 0px 1px 5px #b5b5b5;
+}
+
+.header .weather-icon{
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  vertical-align: sub;
 }
 
 .header div{
@@ -27,6 +42,16 @@
     justify-content:center;
     align-items: center;
     padding: 10px;
+}
+
+
+.grid-cont-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.gauge-heading{
+  font-size: 20px;
 }
 
 .icon-spin {

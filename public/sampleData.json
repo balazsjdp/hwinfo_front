@@ -1,0 +1,47 @@
+{
+    "CPU": {
+        "name": "AMD Ryzen 5 3600",
+        "cores": [
+            {
+                "name": "CPU Core #1",
+                "load": "50",
+                "clock": "4075,223",
+                "power": "3,2"
+            },
+            {
+                "name": "CPU Core #2",
+                "load": "0",
+                "clock": "0",
+                "power": "3,2"
+            },
+            {
+                "name": "CPU Core #3",
+                "load": "78",
+                "clock": "4075,223",
+                "power": "3,2"
+            },
+            {
+                "name": "CPU Core #4",
+                "load": "0",
+                "clock": "0",
+                "power": "3,2"
+            },
+            {
+                "name": "CPU Core #5",
+                "load": "35",
+                "clock": "4000",
+                "power": "3,2"
+            },
+            {
+                "name": "CPU Core #6",
+                "load": "10",
+                "clock": "4000",
+                "power": "3,2"
+            }
+        ],
+        "total": {
+            "temp": "54,2",
+            "load": "20,83"
+        }
+    }
+}
