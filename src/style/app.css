@@ -1,5 +1,6 @@
 .app{
   display: flex;
+  width: 100%;
 }
 
 .header{
@@ -17,6 +18,11 @@
     box-shadow: 0px 1px 5px #b5b5b5;
 }
 
+
+#gauges{
+  justify-content: space-around;
+}
+
 .header .weather-icon{
   width: 20px;
   height: 20px;
@@ -30,18 +36,23 @@
 }
 
 
-.grid-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+.container{
+    display: flex;
     margin: 20px;
 }
 
-.grid-item{
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
-    padding: 10px;
+.container div {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.flex-row{
+  flex-direction: row;
+}
+
+.flex-col{
+  flex-direction: column;
 }
 
 
@@ -52,6 +63,22 @@
 
 .gauge-heading{
   font-size: 20px;
+}
+
+
+table, td, th {
+ border: 1px solid #536a76;
+ padding: 5px;
+    text-align: center;
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#gauges svg{
+  width: 100%;
 }
 
 .icon-spin {
