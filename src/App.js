@@ -1,4 +1,5 @@
 import axios from 'axios';
+import React from 'react';
 
 
 import TempGauge from "./components/TempGauge";
@@ -18,7 +19,7 @@ import { BsServer } from "react-icons/bs";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { ImPower } from "react-icons/im";
 
-
+const { io } = require("socket.io-client");
 
 function App() {
   const [cpuData, setCpuData] = useState(null);
@@ -28,10 +29,12 @@ function App() {
   useEffect(() => {
     getComputerData()
 
-    setInterval(() => {
-      getComputerData()
-    }, 5000);
+   
 
+    const socket = io("http://localhost:3555");
+    socket.on("hardwareInfoChange", (data) => {
+      setCpuData(data.CPU)
+    })
   },[])
 
   function getComputerData(){
@@ -78,7 +81,7 @@ function App() {
             </div>
           </div>
           <div style={{width: "100%"}} className="flex-col">
-            <table>
+            <table id="cpu-cores-table">
               <thead>
                 <th><BsCpu /></th>
                 <th><BsServer /></th>

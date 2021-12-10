@@ -1,5 +1,6 @@
 import GaugeChart from 'react-gauge-chart'
 import { FaTemperatureLow } from "react-icons/fa";
+import React from 'react';
 
 const TempGauge = (props) => {
     return ( 

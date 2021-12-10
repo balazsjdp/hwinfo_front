@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { AiOutlineCalendar } from "react-icons/ai";
@@ -14,7 +15,8 @@ const DateTime = (props) => {
 
 
     if(props.returnType === 'time'){
-        return (<span>
+        return (
+        <span>
              {time.getHours()}:{('0' + time.getMinutes()).slice(-2)}:{('0' + time.getSeconds()).slice(-2)}
         </span>)
     }else{
