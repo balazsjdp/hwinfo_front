@@ -5,7 +5,7 @@ import TempGauge from "./components/TempGauge";
 import LoadGauge from "./components/LoadGauge";
 import DateTime from "./components/DateTime";
 import Weather from "./components/Weather";
-
+import Footer from './components/Footer';
 
 import "./style/app.css"
 
@@ -115,9 +115,12 @@ function App() {
       </div>
 
 
-
+            
+    <Footer />
     </div>
   );
 }
 
 export default App;
+
+
