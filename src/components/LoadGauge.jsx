@@ -1,4 +1,7 @@
 import GaugeChart from 'react-gauge-chart'
+import React from 'react';
+
+
 
 const LoadGauge = (props) => {
     return ( 
@@ -11,6 +14,7 @@ const LoadGauge = (props) => {
           />
         </div>
      );
+    
 }
  
 export default LoadGauge;

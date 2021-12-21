@@ -1,8 +1,11 @@
+import env from "react-dotenv";
+
+
 
 const config = {
-    weatherAPIKey : "486fdc1686815c4bd44651cc1581d407",
-    weatherAPIURL: "https://api.openweathermap.org/data/2.5/weather",
-    weatherAPICity: "Pilisvörösvár"
+    weatherAPIKey : env.WEATHER_API_KEY,
+    weatherAPIURL: env.WEATHER_API_URL,
+    weatherAPICity: env.WEATHER_API_CITY
 }
 
 export default config;
